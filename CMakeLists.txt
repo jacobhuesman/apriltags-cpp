@@ -56,6 +56,3 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O2")
 
 add_subdirectory(src)
 
-install(TARGETS camtest tagtest quadtest DESTINATION /usr/bin)
-install(FILES src/AprilTypes.h src/CameraUtil.h src/DebugImage.h src/Geometry.h src/GrayModel.h src/MathUtil.h src/Profiler.h src/Refine.h src/TagDetection.h src/TagDetector.h src/TagFamily.h src/UnionFindSimple.h DESTINATION /usr/include)
-install(TARGETS apriltags DESTINATION /usr/lib)

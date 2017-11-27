@@ -37,3 +37,7 @@ if (CAIRO_FOUND)
   target_link_libraries(maketags ${CAIRO_LIBRARIES} ${AT_LIBS} ${CAIRO_LIBS})
 
 endif() 
+
+install(TARGETS camtest tagtest quadtest DESTINATION /usr/bin)
+install(FILES AprilTypes.h CameraUtil.h DebugImage.h Geometry.h GrayModel.h MathUtil.h Profiler.h Refine.h TagDetection.h TagDetector.h TagFamily.h UnionFindSimple.h DESTINATION /usr/include)
+install(TARGETS apriltags DESTINATION /usr/lib)
