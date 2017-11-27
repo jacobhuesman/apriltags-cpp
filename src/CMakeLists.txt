@@ -1,4 +1,4 @@
-add_library(apriltags
+add_library(apriltags SHARED
   CameraUtil.cpp
   DebugImage.cpp
   Geometry.cpp 
