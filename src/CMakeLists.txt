@@ -38,6 +38,6 @@ if (CAIRO_FOUND)
 
 endif() 
 
-install(TARGETS camtest tagtest quadtest DESTINATION /usr/bin)
-install(FILES AprilTypes.h CameraUtil.h DebugImage.h Geometry.h GrayModel.h MathUtil.h Profiler.h Refine.h TagDetection.h TagDetector.h TagFamily.h UnionFindSimple.h DESTINATION /usr/include)
-install(TARGETS apriltags DESTINATION /usr/lib)
+install(TARGETS camtest tagtest quadtest DESTINATION CMAKE_INSTALL_FULL_BINDIR)
+install(FILES AprilTypes.h CameraUtil.h DebugImage.h Geometry.h GrayModel.h MathUtil.h Profiler.h Refine.h TagDetection.h TagDetector.h TagFamily.h UnionFindSimple.h DESTINATION CMAKE_INSTALL_FULL_INCLUDEDIR)
+install(TARGETS apriltags DESTINATION CMAKE_INSTALL_FULL_LIBDIR)
