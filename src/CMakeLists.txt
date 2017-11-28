@@ -11,9 +11,9 @@ add_library(apriltags SHARED
   UnionFindSimple.cpp
 )
 
-set(AT_LIBS apriltags ${OPENCV_LDFLAGS})
+set(AT_LIBS apriltags ${OpenCV_LIBS})
 
-target_link_libraries(apriltags ${AT_LIBS})
+target_link_libraries(apriltags ${OpenCV_LIBS})
 
 add_executable(camtest camtest.cpp)
 target_link_libraries(camtest ${AT_LIBS})
@@ -38,6 +38,6 @@ if (CAIRO_FOUND)
 
 endif() 
 
-install(TARGETS camtest tagtest quadtest DESTINATION CMAKE_INSTALL_FULL_BINDIR)
-install(FILES AprilTypes.h CameraUtil.h DebugImage.h Geometry.h GrayModel.h MathUtil.h Profiler.h Refine.h TagDetection.h TagDetector.h TagFamily.h UnionFindSimple.h DESTINATION CMAKE_INSTALL_FULL_INCLUDEDIR)
-install(TARGETS apriltags DESTINATION CMAKE_INSTALL_FULL_LIBDIR)
+install(TARGETS camtest tagtest quadtest DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(FILES AprilTypes.h CameraUtil.h DebugImage.h Geometry.h GrayModel.h MathUtil.h Profiler.h Refine.h TagDetection.h TagDetector.h TagFamily.h UnionFindSimple.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(TARGETS apriltags DESTINATION ${CMAKE_INSTALL_LIBDIR})

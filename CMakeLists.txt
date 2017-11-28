@@ -21,8 +21,9 @@ find_library(GLUT_LIBRARY glut)
 
 include(FindPkgConfig)
 
-pkg_search_module(OPENCV REQUIRED opencv>=2.3 opencv-2.3.1)
-include_directories(${OPENCV_INCLUDE_DIRS})
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+MESSAGE( STATUS "OPENCV_INCLUDE_DIRS:         ${OpenCV_INCLUDE_DIRS}" )
 
 pkg_check_modules(CAIRO cairo)
 
@@ -33,9 +34,9 @@ endif ()
 find_package( CGAL QUIET COMPONENTS  )
 
 if (CGAL_FOUND)
-  set(TMP_CXX_FLAGS ${CXX_FLAGS})
+  #set(TMP_CXX_FLAGS ${CXX_FLAGS})
   include( ${CGAL_USE_FILE} )
-  set(CXX_FLAGS ${TMP_CXX_FLAGS} " " ${CXX_FLAGS})
+  #set(CXX_FLAGS ${TMP_CXX_FLAGS} " " ${CXX_FLAGS})
   add_definitions(-DHAVE_CGAL)
   find_package( Boost REQUIRED )
 else()
