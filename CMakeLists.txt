@@ -35,6 +35,7 @@ endif ()
 find_package( CGAL QUIET COMPONENTS  )
 
 if (CGAL_FOUND)
+  message("-- CGAL found")
   #set(TMP_CXX_FLAGS ${CXX_FLAGS})
   include( ${CGAL_USE_FILE} )
   #set(CXX_FLAGS ${TMP_CXX_FLAGS} " " ${CXX_FLAGS})
