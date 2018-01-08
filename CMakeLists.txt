@@ -20,6 +20,7 @@ endif()
 find_library(GLUT_LIBRARY glut)
 
 include(FindPkgConfig)
+include(GNUInstallDirs)
 
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
