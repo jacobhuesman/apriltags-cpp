@@ -19,7 +19,7 @@ namespace at {
   typedef uint64_t code_t;
   typedef unsigned int uint;
 
-#if 1 // Change this to zero to make everything double-precision
+#if 0 // Change this to zero to make everything double-precision
 
   typedef float real;
   enum { REAL_IMAGE_TYPE = CV_32F };

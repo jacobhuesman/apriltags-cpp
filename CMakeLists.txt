@@ -22,7 +22,7 @@ find_library(GLUT_LIBRARY glut)
 include(FindPkgConfig)
 include(GNUInstallDirs)
 
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 3 REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 MESSAGE( STATUS "OPENCV_INCLUDE_DIRS:         ${OpenCV_INCLUDE_DIRS}" )
 
